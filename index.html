@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>DrMario NES</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#00a1d6" />
+    <link rel="icon" href="DrMario.png">
+    <link href="css/jsnes.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="screen">
+        <div id="emulator" style="text-align:center;">
+            <canvas class="nes-screen" width="256" height="320"></canvas>
+        </div>
+    </div>
+    <script src="lib/jquery-1.4.2.min.js"></script>
+    <script src="lib/dynamicaudio-min.js"></script>
+    <script src="source/nes.js"></script>
+    <script src="source/utils.js"></script>
+    <script src="source/cpu.js"></script>
+    <script src="source/keyboard.js"></script>
+    <script src="source/mappers.js"></script>
+    <script src="source/papu.js"></script>
+    <script src="source/ppu.js"></script>
+    <script src="source/rom.js"></script>
+    <script src="source/ui.js"></script>
+    <script src="source/index.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+    </script>
+</body>
+</html>
